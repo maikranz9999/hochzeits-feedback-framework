@@ -28,7 +28,7 @@ export const FeedbackAnalyzer: React.FC<FeedbackAnalyzerProps> = ({ module }) =>
           mussKann: "Muss",
           regel: "Pattern Interrupt vorhanden",
           beschreibung: "Es muss ein klar formulierter Hook enthalten sein, der sofort die Aufmerksamkeit auf sich zieht und das Interesse weckt.",
-          positivBeispiele: "„am Ende verrate ich euch einen Geheimtipp" oder „ich zeige euch 10 exklusive Locations"",
+          positivBeispiele: "\"am Ende verrate ich euch einen Geheimtipp\" oder \"ich zeige euch 10 exklusive Locations\"",
           negativBeispiele: ""
         },
         {
@@ -36,7 +36,7 @@ export const FeedbackAnalyzer: React.FC<FeedbackAnalyzerProps> = ({ module }) =>
           mussKann: "Muss",
           regel: "Persönlicher Anlass für das Video",
           beschreibung: "Der Dienstleister benennt einen konkreten, persönlichen Grund, warum er dieses Video aufnimmt.",
-          positivBeispiele: "„Ich nehme dieses Video auf, weil ich in letzter Zeit immer wieder gesehen habe, dass…"",
+          positivBeispiele: "\"Ich nehme dieses Video auf, weil ich in letzter Zeit immer wieder gesehen habe, dass…\"",
           negativBeispiele: "Keine Begründung oder Motivation für das Video vorhanden"
         },
         {
@@ -44,7 +44,7 @@ export const FeedbackAnalyzer: React.FC<FeedbackAnalyzerProps> = ({ module }) =>
           mussKann: "Muss", 
           regel: "Erfahrungsbezug zur Zielgruppe",
           beschreibung: "Der Dienstleister muss formulieren, dass er in der Vergangenheit wiederholt ein bestimmtes Problem bei Brautpaaren beobachtet hat.",
-          positivBeispiele: "„Ich habe bei meinen Paaren immer wieder festgestellt, dass…"",
+          positivBeispiele: "\"Ich habe bei meinen Paaren immer wieder festgestellt, dass…\"",
           negativBeispiele: ""
         },
         {
@@ -52,7 +52,7 @@ export const FeedbackAnalyzer: React.FC<FeedbackAnalyzerProps> = ({ module }) =>
           mussKann: "Muss",
           regel: "Problem und Nutzen werden angerissen",
           beschreibung: "Es wird kurz dargelegt, welches konkrete Problem viele Brautpaare haben – und warum das Video hilfreich ist.",
-          positivBeispiele: "„Viele Paare haben das Problem, dass… Dieses Video hilft euch dabei, Klarheit zu bekommen."",
+          positivBeispiele: "\"Viele Paare haben das Problem, dass… Dieses Video hilft euch dabei, Klarheit zu bekommen.\"",
           negativBeispiele: ""
         },
         {
@@ -60,15 +60,15 @@ export const FeedbackAnalyzer: React.FC<FeedbackAnalyzerProps> = ({ module }) =>
           mussKann: "Muss",
           regel: "Thema ist klar erkennbar",
           beschreibung: "Der thematische Schwerpunkt des GNC-Videos muss bereits aus den Stichpunkten eindeutig hervorgehen.",
-          positivBeispiele: "„In diesem Video geht's um das Thema XYZ – das habe ich ganz oft in den letzten Monaten gesehen."",
-          negativBeispiele: "Unklare Formulierungen wie „Ich rede heute einfach mal über ein Thema, das mir wichtig ist""
+          positivBeispiele: "\"In diesem Video geht's um das Thema XYZ – das habe ich ganz oft in den letzten Monaten gesehen.\"",
+          negativBeispiele: "\"Unklare Formulierungen wie 'Ich rede heute einfach mal über ein Thema, das mir wichtig ist'\""
         },
         {
           abschnitt: "Einführung / Pattern Interrupt",
           mussKann: "Muss",
           regel: "Mehrwert wird angekündigt",
           beschreibung: "Es wird ein konkreter Mehrwert in Aussicht gestellt (z. B. Liste, Geheimtipp oder besondere Informationen).",
-          positivBeispiele: "„Und am Ende gibt's noch meine Liste mit 5 Tipps, wie ihr XYZ vermeidet."",
+          positivBeispiele: "\"Und am Ende gibt's noch meine Liste mit 5 Tipps, wie ihr XYZ vermeidet.\"",
           negativBeispiele: ""
         },
         {
@@ -76,7 +76,7 @@ export const FeedbackAnalyzer: React.FC<FeedbackAnalyzerProps> = ({ module }) =>
           mussKann: "Kann",
           regel: "Storytelling-Elemente", 
           beschreibung: "Geschichten und persönliche Erfahrungen machen das Video authentischer und interessanter.",
-          positivBeispiele: "„Letzte Woche hatte ich ein Paar, das genau diesen Fehler gemacht hat..."",
+          positivBeispiele: "\"Letzte Woche hatte ich ein Paar, das genau diesen Fehler gemacht hat...\"",
           negativBeispiele: ""
         }
       ];
