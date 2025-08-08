@@ -125,55 +125,19 @@ export const FeedbackAnalyzer: React.FC<FeedbackAnalyzerProps> = ({ module }) =>
     }
   };
 
-  const extractTextFromPDF = async (file: File): Promise<string> => {
-    const reader = new FileReader();
-    
-    return new Promise((resolve, reject) => {
-      reader.onload = async () => {
-        try {
-          const typedarray = new Uint8Array(reader.result as ArrayBuffer);
-          const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.js');
-          const pdfjsWorker = await import('pdfjs-dist/legacy/build/pdf.worker.js');
-          // @ts-ignore
-          pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
-
-          const pdf = await pdfjsLib.getDocument({ data: typedarray }).promise;
-          let fullText = '';
-
-          for (let i = 1; i <= pdf.numPages; i++) {
-            const page = await pdf.getPage(i);
-            const content = await page.getTextContent();
-            const strings = content.items.map((item: any) => item.str);
-            fullText += strings.join(' ') + '\n';
-          }
-
-          resolve(fullText);
-        } catch (error) {
-          reject('Fehler beim PDF-Parsing');
-        }
-      };
-
-      reader.onerror = reject;
-      reader.readAsArrayBuffer(file);
-    });
-  };
-
   const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
 
     try {
-      if (file.type === 'application/pdf') {
-        const text = await extractTextFromPDF(file);
-        setInputText(text);
-      } else if (file.type === 'text/plain') {
+      if (file.type === 'text/plain') {
         const reader = new FileReader();
         reader.onload = (e) => {
           setInputText(e.target?.result as string);
         };
         reader.readAsText(file);
       } else {
-        setError('Nur PDF- und TXT-Dateien werden unterstützt.');
+        setError('Nur TXT-Dateien werden unterstützt.');
       }
     } catch (err) {
       setError('Fehler beim Laden der Datei.');
@@ -204,11 +168,11 @@ export const FeedbackAnalyzer: React.FC<FeedbackAnalyzerProps> = ({ module }) =>
             {/* File Upload */}
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Datei hochladen (PDF oder TXT)
+                TXT-Datei hochladen
               </label>
               <input
                 type="file"
-                accept=".pdf,.txt"
+                accept=".txt"
                 onChange={handleFileUpload}
                 className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-rose-50 file:text-rose-700 hover:file:bg-rose-100 mb-3"
               />
